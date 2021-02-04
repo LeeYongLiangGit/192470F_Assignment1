@@ -51,8 +51,8 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/Registration">Register</a></li>
                         <li><a runat="server" href="404.aspx">404 Error</a></li>
+                        <li><a runat="server" href="~/Registration">Register</a></li>
 
                         <% if (Session["UserID"] == null) {%>
                         <li><a runat="server" href="~/Login">Login</a></li> <%;%>

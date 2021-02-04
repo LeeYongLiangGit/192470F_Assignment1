@@ -26,9 +26,13 @@ namespace _192470F_Assignment1
         string MYDB_192470F = System.Configuration.ConfigurationManager.ConnectionStrings["192470FDBConnection"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["UserID"] != null)
+            if (Session["UserID"] != null && Session["AuthToken"] != null &&
+                Request.Cookies["AuthToken"] != null)
             {
-                Response.Redirect("Default.aspx");
+                if (Session["AuthToken"].ToString().Equals(Request.Cookies["AuthToken"].Value))
+                {
+                    Response.Redirect("Default.aspx");
+                }
             }
 
             if (Request.QueryString["value"] != null)
@@ -56,7 +60,7 @@ namespace _192470F_Assignment1
                 {
                     lockdownResult = false;
                 }
-                else if (lockDate.TimeOfDay.TotalMinutes + 10 < DateTime.Now.TimeOfDay.TotalMinutes)
+                else if (lockDate.TimeOfDay.TotalMinutes + 1 < DateTime.Now.TimeOfDay.TotalMinutes)
                 {
                     lockdownResult = false;
                 }
@@ -126,7 +130,7 @@ namespace _192470F_Assignment1
                 }
 
                 lockDate = getLockDate(userid);
-                lblMessage.Text = "Your account is currently lockout! You will need to wait until " + lockDate.AddMinutes(10) + " before it is unlocked.";
+                lblMessage.Text = "Your account is currently lockout! You will need to wait until " + lockDate.AddMinutes(1) + " before it is unlocked.";
                 lblMessage.ForeColor = System.Drawing.Color.Red;
             }
         }

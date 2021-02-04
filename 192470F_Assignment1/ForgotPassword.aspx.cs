@@ -112,7 +112,7 @@ namespace _192470F_Assignment1
                         }
                         else
                         {
-                            decryptData(history);
+                            newHistory = decryptData(history);
                         }
                     }
                     else
@@ -123,7 +123,7 @@ namespace _192470F_Assignment1
                         }
                         else
                         {
-                            decryptData(history);
+                            newHistory = decryptData(history);
                         }
                     }
 
