@@ -17,5 +17,10 @@ namespace _192470F_Assignment1
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
+
+        protected void Application_BeginRequest()
+        {
+            Response.AddHeader("X-Frame-Options", "DENY");
+        }
     }
 }
