@@ -22,7 +22,7 @@
     <br />
     <br />
     New Password:
-    <asp:TextBox ID="new_pwd" runat="server" onkeyup="javascript:validate()"></asp:TextBox>
+    <asp:TextBox ID="new_pwd" runat="server" onkeyup="javascript:validate()" TextMode="Password"></asp:TextBox>
 
     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server"
         ControlToValidate="new_pwd"
@@ -36,7 +36,7 @@
     <p id="IbI_pwdchecker"></p>
 
     Confirm Password:
-    <asp:TextBox ID="cfm_pwd" runat="server"></asp:TextBox>
+    <asp:TextBox ID="cfm_pwd" runat="server" TextMode="Password"></asp:TextBox>
 
     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server"
         ControlToValidate="cfm_pwd"
