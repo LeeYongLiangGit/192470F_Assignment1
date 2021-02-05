@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-    <script src="https://www.google.com/recaptcha/api.js?render=6LcVXeUZAAAAAEpxBHYlmzbyc2Lcvs4quHfffrto"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=Your captcha key"></script>
 
     <table>
         <tr>
@@ -51,7 +51,7 @@
 
     <script>
         grecaptcha.ready(function () {
-            grecaptcha.execute('<Your captcha key', { action: 'Login' }).then(function (token) {
+            grecaptcha.execute('your captcha key', { action: 'Login' }).then(function (token) {
                 document.getElementById("g-recaptcha-response").value = token;
             });
         });
