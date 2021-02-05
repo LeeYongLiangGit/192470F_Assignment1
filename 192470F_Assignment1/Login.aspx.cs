@@ -143,7 +143,7 @@ namespace _192470F_Assignment1
             string captchaResponse = Request.Form["g-recaptcha-response"];
 
             // To send a GET request to Google along with the response and Secret key.
-            HttpWebRequest req = (HttpWebRequest)WebRequest.Create("https://www.google.com/recaptcha/api/siteverify?secret=Your captcha key &response=" + captchaResponse);
+            HttpWebRequest req = (HttpWebRequest)WebRequest.Create("https://www.google.com/recaptcha/api/siteverify?secret= &response=" + captchaResponse);
 
             try
             {
