@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-    <script src="https://www.google.com/recaptcha/api.js?render=6LcVXeUZAAAAAEpxBHYlmzbyc2Lcvs4quHfffrto"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=Your captcha key"></script>
 
     <table>
         <tr>
